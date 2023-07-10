@@ -1,0 +1,26 @@
+[workspace]
+members = ["contracts/*", "packages/*"]
+
+[workspace.package]
+name = "vectis-plugins-template"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/nymlab/vectis-plugins-template"
+keywords = [ "Vectis", "CosmWasm", "smart-contract-wallet"]
+
+[workspace.dependencies]
+cosmwasm-schema = "1.2"
+cw_storage_plus = "1.2"
+cosmwasm-std = "1.2"
+cw2 = "1.0"
+thiserror = "1"
+
+[profile.release]
+codegen-units = 1
+incremental = false
+rpath = false
+lto = true
+overflow-checks = true
+opt-level = 3
+debug = false
+debug-assertions = false

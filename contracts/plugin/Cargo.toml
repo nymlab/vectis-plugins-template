@@ -1,0 +1,22 @@
+[package]
+name = "example-plugin"
+description = "What does your plugin do?"
+version = { workspace = true }
+edition = { workspace = true }
+repository = { workspace = true }
+keywords = { workspace = true }
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+[dependencies]
+plugin-package = { path = "../../packages/plugin-package"} 
+cosmwasm-std = { workspace = true }
+cw2 = { workspace = true }
+thiserror = { workspace = true }
