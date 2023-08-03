@@ -9,4 +9,4 @@ keywords = { workspace = true }
 [dependencies]
 cosmwasm-schema = { workspace = true }
 cosmwasm-std = { workspace = true }
-cw_storage_plus = { workspace = true }
+cw-storage-plus = { workspace = true }
